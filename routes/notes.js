@@ -19,7 +19,7 @@ router.get("/notes", (req, res) => {
         : res.json("No note with that ID");
     });
 });
-
+// selects specific note
 router.get("/notes/:note_id", (req, res) => {
   const noteId = req.params.note_id;
   readFromFile("./db/db.json")
